@@ -1,0 +1,4 @@
+# run68Win10VS2022
+Human68k CUI Emulator
+
+rurutan氏制作のrun68がうまくコンパイルできなかったので、微修正を行いコンパイルできるようにしました。
