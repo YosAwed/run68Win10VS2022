@@ -1,6 +1,9 @@
-/* $Id: getini.c,v 1.2 2009-08-08 06:49:44 masamic Exp $ */
+/* $Id: getini.c,v 1.21 2022-05-08 00:11:29 Awed Exp $ */
 
 /*
+ * Revision 1.1.1.2  2022-05-08 00:11:29 Awed
+ * Bug fix for Win10 Visual Studio 2022
+ *
  * $Log: not supported by cvs2svn $
  * Revision 1.1.1.1  2001/05/23 11:22:07  masamic
  * First imported source code and docs
@@ -70,19 +73,19 @@ void	read_ini(char *path, char *prog)
     {
         return; /* .exe以外の拡張子はないと思う。*/
     }
-#if defined(WIN32)
-    /* 次に、フルパス名を得る。*/
-    l = SearchPathA(
-        NULL,       // address of search path 
-        buf,        // address of filename 
-        NULL,       // address of extension 
-        MAX_PATH,   // size, in characters, of buffer 
-        path,       // address of buffer for found filename 
-        &p          // address of pointer to file component 
-    );
-#else
-    snprintf(path, MAX_PATH, "%s", buf);
-#endif
+//#if defined(WIN32)
+//    /* 次に、フルパス名を得る。*/
+//    l = SearchPathA(
+//        NULL,       // address of search path 
+//        buf,        // address of filename 
+//        NULL,       // address of extension 
+//        MAX_PATH,   // size, in characters, of buffer 
+//        path,       // address of buffer for found filename 
+//        &p          // address of pointer to file component 
+//    );
+//#else
+//    snprintf(path, MAX_PATH, "%s", buf);
+//#endif
 #if defined(_DEBUG)
     printf("INI:%s\n", path);
 #endif
