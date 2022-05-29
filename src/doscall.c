@@ -136,7 +136,7 @@ static Long gets2( char *, int );
 
 Long Getenv_common(const char *name_p, char *buf_p);
 
-#if defined(__APPLE__) || defined(__linux__)
+#if defined(__APPLE__) || defined(__linux__) || defined(__EMSCRIPTEN_tiny__)
 void CloseHandle( FILE* fp ) {
 	fclose( fp );
 }
