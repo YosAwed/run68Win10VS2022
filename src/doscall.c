@@ -2571,6 +2571,8 @@ static Long Filedate( short hdl, Long dt )
 	printf("DOSCALL FILEDATE:not defined yet %s %d\n", __FILE__, __LINE__ );
 #elif defined(__linux__)
 	printf("DOSCALL FILEDATE:not defined yet %s %d\n", __FILE__, __LINE__ );
+#elif defined(__EMSCRIPTEN_tiny__)
+	printf("DOSCALL FILEDATE:not defined yet %s %d\n", __FILE__, __LINE__ );
 #else
 #if defined(WIN32)
 	FILETIME ctime, atime, wtime;
