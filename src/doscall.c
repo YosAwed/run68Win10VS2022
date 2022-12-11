@@ -1010,6 +1010,7 @@ int dos_call( UChar code )
 			printf("%-10s code=0xFF%02X\n", "????????", code );
 		}
 		break;
+	        rd [ 0 ] = -1;
 	}
 	return( FALSE );
 }
