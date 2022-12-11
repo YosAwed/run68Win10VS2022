@@ -1009,8 +1009,9 @@ int dos_call( UChar code )
 		if (func_trace_f) {
 			printf("%-10s code=0xFF%02X\n", "????????", code );
 		}
+		rd [ 0 ] = -1;
 		break;
-	        rd [ 0 ] = -1;
+
 	}
 	return( FALSE );
 }
